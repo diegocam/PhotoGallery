@@ -9,12 +9,12 @@ class App extends Component {
         this.state = {
             images: [
                 {
-                    url: '',
-                    caption: '',
+                    url: 'http://placekitten.com/800/500',
+                    caption: 'Cat 1',
                 },
                 {
-                    url: '',
-                    caption: '',
+                    url: 'http://placekitten.com/g/800/500',
+                    caption: 'Cat 2',
                 }
             ]
         };
