@@ -8,7 +8,7 @@
 }
 
 .photo-gallery .slider{
-    width: 10000px; /* set by JS */
+    width: 800px; /* modified by JS */
     margin-left: -100px /* set by JS */
 }
 
