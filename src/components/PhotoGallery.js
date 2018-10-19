@@ -14,9 +14,11 @@ class PhotoGallery extends Component {
     render() {
         return (
             <div className="photo-gallery">
-                {this.state.images.map((image, i) =>
-                    <Photo key={i} image={image}/>
-                )}
+                <div className="slider">
+                    {this.state.images.map((image, i) =>
+                        <Photo key={i} image={image}/>
+                    )}
+                </div>
             </div>
         );
     }

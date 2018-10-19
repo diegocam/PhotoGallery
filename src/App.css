@@ -1,12 +1,27 @@
-.photo {
+.photo-gallery {
+    max-width: 800px;  /* set by JS */
     position: relative;
+    margin: 10px auto;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-.photo img {
-
+.photo-gallery .slider{
+    width: 10000px; /* set by JS */
+    margin-left: -100px /* set by JS */
 }
 
-.photo .caption {
+.photo-gallery .slider .photo {
+    position: relative;
+    display: inline-block;
+}
+
+.photo-gallery .slider .photo img {
+    vertical-align: bottom;
+}
+
+.photo-gallery .slider .photo .caption {
     position: absolute;
     top: 50%;
 }
