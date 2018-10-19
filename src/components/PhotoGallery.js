@@ -3,12 +3,12 @@ import Photo from './Photo';
 
 class PhotoGallery extends Component {
 
-    constructor(){
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             // images array: each image should have a "url" and "caption"
             images: this.props.images
-        }
+        };
     }
 
     render() {
