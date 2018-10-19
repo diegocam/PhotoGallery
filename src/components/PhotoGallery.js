@@ -15,8 +15,8 @@ class PhotoGallery extends Component {
 
     render() {
         return (
-            <div className="photo-gallery" style={this.sliderStyle}>
-                <div className="slider">
+            <div className="photo-gallery">
+                <div className="slider" style={this.sliderStyle}>
                     {this.state.images.map((image, i) =>
                         <Photo key={i} image={image}/>
                     )}
