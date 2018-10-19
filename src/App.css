@@ -1,0 +1,12 @@
+.photo {
+    position: relative;
+}
+
+.photo img {
+
+}
+
+.photo .caption {
+    position: absolute;
+    top: 50%;
+}
