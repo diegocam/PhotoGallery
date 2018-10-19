@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Photo from './Photo';
 
 class PhotoGallery extends Component {
 
@@ -13,7 +14,9 @@ class PhotoGallery extends Component {
     render() {
         return (
             <div className="photo-gallery">
-
+                {this.state.images.map((image) =>
+                    <Photo image={image}/>
+                )}
             </div>
         );
     }
