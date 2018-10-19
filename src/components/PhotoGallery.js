@@ -6,14 +6,16 @@ class PhotoGallery extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            // images array: each image should have a "url" and "caption"
-            images: this.props.images
+            images: this.props.images // images array: each image should have a "url" and "caption"
+        };
+        this.sliderStyle = {
+            width: this.state.images.length * 800 // all images are 800 width
         };
     }
 
     render() {
         return (
-            <div className="photo-gallery">
+            <div className="photo-gallery" style={this.sliderStyle}>
                 <div className="slider">
                     {this.state.images.map((image, i) =>
                         <Photo key={i} image={image}/>
