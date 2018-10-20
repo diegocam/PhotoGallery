@@ -6,10 +6,10 @@ class PhotoGallery extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            images: this.props.images // images array: each image should have a "url" and "caption"
+            images: this.props.images  // images array: each image should have a "url" and "caption"
         };
         this.sliderStyle = {
-            width: this.state.images.length * 800 // all images are 800 width
+            width: this.state.images.length * 800  // all images are 800 width
         };
     }
 
