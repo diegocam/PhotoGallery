@@ -4,38 +4,37 @@ import Photo from './Photo';
 class PhotoGallery extends Component {
 
     constructor(props) {
-        super(props);
+        super(props)
+        this.imgWidth = 800
         this.state = {
             images: this.props.images,  // images array: each image should have a "url" and "caption"
             sliderStyle: {
-                width: this.props.images.length * 800,  // all images are 800 width
-                marginLeft: 0
+                width: this.props.images.length * this.imgWidth,  // all images are 800 width
             }
         };
-        this.sliding = false;
-        this.startClientX = 0;
-        this.onStart = this.onStart.bind(this)
-
+        this.sliding = false
+        this.startClientX = 0
+        this.deltaSlide = 0
     }
 
     onStart(e) {
         if (!this.sliding) {
-            this.sliding = true;
-            this.startClientX = e.clientX - this.state.sliderStyle.marginLeft;
+            this.sliding = true
+            this.startClientX = e.clientX - this.deltaSlide
         }
     }
 
     onMove(e) {
         if (this.sliding) {
-            const deltaSlide = e.clientX - this.startClientX;
-            this.setState(prevState => ({
-                sliderStyle: { ...prevState.sliderStyle, 'marginLeft': deltaSlide }
-            }))
+            this.deltaSlide = e.clientX - this.startClientX
+            if (this.deltaSlide <= 0) {
+                e.target.style.transform = "translateX(" + this.deltaSlide + "px)"
+            }
         }
     }
 
     onEnd() {
-        this.sliding = false;
+        this.sliding = false
     }
 
     render() {

@@ -10,8 +10,7 @@
 .photo-gallery .slider {
     width: 800px;
     height: 100%;
-    margin-left: 0;
-    white-space: nowrap;
+    transform: translateX(0);
     cursor: grab;
 }
 
