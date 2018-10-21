@@ -1,5 +1,5 @@
 .photo-gallery {
-    max-width: 800px;  /* set by JS */
+    max-width: 800px;
     position: relative;
     margin: 10px auto;
     border: 3px solid #ccc;
@@ -7,14 +7,22 @@
     overflow: hidden;
 }
 
-.photo-gallery .slider{
-    width: 800px; /* modified by JS */
-    margin-left: -100px /* set by JS */
+.photo-gallery .slider {
+    width: 800px;
+    height: 100%;
+    margin-left: 0;
+    white-space: nowrap;
+    cursor: grab;
 }
 
 .photo-gallery .slider .photo {
     position: relative;
+    height: 500px;
+    width: 800px;
+    background-color: #ccc;
     display: inline-block;
+    user-select: none;
+    pointer-events: none;
 }
 
 .photo-gallery .slider .photo img {

@@ -11,7 +11,7 @@ class Photo extends Component {
     render() {
         return (
             <div className="photo">
-                <img src={this.state.image.url} alt={this.state.image.caption}/>
+                <img src={this.state.image.url} alt={this.state.image.caption} />
                 <div className="caption">{this.state.image.caption}</div>
             </div>
         );
