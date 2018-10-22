@@ -9,12 +9,16 @@ class App extends Component {
         this.state = {
             images: [
                 {
-                    url: 'http://placekitten.com/800/500',
+                    url: 'http://placekitten.com/g/800/500',
                     caption: 'Cat 1',
                 },
                 {
-                    url: 'http://placekitten.com/g/800/500',
+                    url: 'http://placekitten.com/800/500',
                     caption: 'Cat 2',
+                },
+                {
+                    url: 'http://placekitten.com/g/800/500',
+                    caption: 'Cat 3',
                 }
             ]
         };
@@ -23,7 +27,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <PhotoGallery images={this.state.images}/>
+                <PhotoGallery images={this.state.images} />
             </div>
         );
     }
