@@ -27,6 +27,10 @@ class App extends Component {
     render() {
         return (
             <div className="App">
+                <div className="header">
+                    <h1>Photo Gallery</h1>
+                    <p>Drag images from left to right to see them change.</p>
+                </div>
                 <PhotoGallery images={this.state.images} />
             </div>
         );
