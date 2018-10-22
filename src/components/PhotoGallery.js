@@ -49,7 +49,7 @@ class PhotoGallery extends Component {
                 } else if (sliderBounds.right < galleryBounds.right) {
                     this.sliderX = -(this.state.images.length * this.imgWidth) + this.imgWidth
                 } else {
-                    this.sliderX = this.sliderX - (this.distance > 0 ? -800 : 800)
+                    this.sliderX = this.sliderX - (this.distance > 0 ? -this.imgWidth : this.imgWidth)
                 }
             }
 
