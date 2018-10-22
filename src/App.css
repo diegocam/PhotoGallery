@@ -12,6 +12,7 @@
     height: 100%;
     transform: translateX(0);
     cursor: grab;
+    transition: all .1s ease-out;
 }
 
 .photo-gallery .slider .photo {
@@ -32,6 +33,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
     color: white;
     text-shadow: 0 0 3px black;
     font-size: 30px;
